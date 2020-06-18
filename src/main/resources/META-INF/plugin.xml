@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>org.company.JavaFormatter-Plugin</id>
+    <name>JavaFormatter</name>
+    <vendor>MikhniukR</vendor>
+    <description><![CDATA[
+        A plugin, which provides opportunity to format code in selected fragment or file.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <actions>
+        <group id="com.plugin.actions.DefaultGroups" text="Format" popup="true">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="com.plugin.frontend.actions.FormatFileAction"
+                    class="com.plugin.frontend.actions.FormatFileAction"
+                    text="Format Area/File"
+                    icon="/images/icon.png">
+                <keyboard-shortcut first-keystroke="ctrl alt e" keymap="$default"/>
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
